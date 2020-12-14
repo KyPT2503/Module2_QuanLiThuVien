@@ -15,7 +15,8 @@ public class Main {
             int option=scanner.nextInt();
             if (option == 1) {
                 System.out.println("Type: name, author, price, amount, weight:");
-                Book book = new Book(scanner.next(), scanner.next(), scanner.nextInt(), scanner.nextInt(), scanner.nextDouble());
+                scanner.nextLine();
+                Book book = new Book(scanner.nextLine(), scanner.nextLine(), scanner.nextInt(), scanner.nextInt(), scanner.nextDouble());
                 lib.addNewBook(book);
             } else if (option == 2) {
                 System.out.println("what is index of book you want to edit?");
