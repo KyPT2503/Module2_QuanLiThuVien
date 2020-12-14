@@ -1,17 +1,17 @@
 import java.util.Scanner;
 
 public class ManagerBook {
-    private Book[] books;
+    private Book[] books=new Book[0];
 
     final Scanner scanner = new Scanner(System.in);
 
     public void addNewBook(Book book) {
-        Book[] newBooks = new Book[books.length + 1];
-        for (int i = 0; i < books.length; i++) {
-            newBooks[i] = books[i];
-            newBooks[newBooks.length - 1] = book;
+        Book[] newBooks = new Book[this.books.length + 1];
+        for (int i = 0; i < this.books.length; i++) {
+            newBooks[i] = this.books[i];
         }
-        books=newBooks;
+        newBooks[newBooks.length - 1] = book;
+        this.books=newBooks;
     }
 
     public void editBookByIndex(int index) {
@@ -35,5 +35,10 @@ public class ManagerBook {
             sumPrice+=book.getPrice();
         }
         return sumPrice;
+    }
+    public void printListBooks(){
+        for (int i = 0; i < books.length; i++) {
+            System.out.println(books[i].toString());
+        }
     }
 }

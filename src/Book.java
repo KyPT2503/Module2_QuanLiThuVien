@@ -59,4 +59,15 @@ public class Book {
     public double getTotalWeight(){
         return this.amount*this.weight;
     }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "name='" + name + '\'' +
+                ", author='" + author + '\'' +
+                ", price=" + price +
+                ", amount=" + amount +
+                ", weight=" + weight +
+                '}';
+    }
 }
